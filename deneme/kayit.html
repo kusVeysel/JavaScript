@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../WebTasarim/deneme/BOOTSTRAPLOCAL.CSS">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="Toastr/toastr.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div>
+        <h1 class="text-center mb-2 text-white">KAYIT OL</h1>
+        <div class="card ">
+            <div class="card-body">
+
+                <div class="kutu mb-3">
+                    <input type="text" name="isim" id="isim" class="form-control" required>
+                    <label>İsim</label>
+                </div>
+                <div class="kutu mb-3">
+                    <input type="text" name="soyisim" id="soyisim" class="form-control" required>
+                    <label>Soy İsim</label>
+                </div>
+                <div class="kutu mb-3">
+                    <input type="text" name="kullaniciadi" id="kullaniciadi" class="form-control" required>
+                    <label>Kullanıcı Adı</label>
+                </div>
+                <div class="kutu mb-3">
+                    <input type="password" name="sifre" id="sifre" class="form-control" required>
+                    <label>Şifre</label>
+                </div>
+                <div class="kutu mb-3">
+                    <input type="tel" name="telefon" id="telefon" class="form-control" required>
+                    <label>Telefon</label>
+                </div>
+                <div class="kutu mb-3">
+                    <input type="email" name="email" id="email" class="form-control" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="justify-content-evenly d-flex">
+                    <a class="btn btn-outline-info btn-sm buton2 " href="index.html">Geri dön</a>
+                    <button class="btn btn-warning btn-sm buton2 " onclick="kayitol()">Kayıt Ol</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../WebTasarim/deneme/JQUERYLOCAL.JS"></script>
+    <script src="Toastr/toastr.min.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

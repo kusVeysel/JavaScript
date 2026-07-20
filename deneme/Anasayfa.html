@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dönen Kartlar</title>
+    <link rel="stylesheet" href="../../WebTasarim/deneme/BOOTSTRAPLOCAL.CSS">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #f2f4f7;
+        }
+
+        .sahne {
+            min-height: calc(100vh - 56px);
+            display: grid;
+            place-items: center;
+        }
+
+        .donen-kartlar {
+            position: relative;
+            width: min(86vw, 820px);
+            aspect-ratio: 1;
+            animation: don 9s linear infinite;
+        }
+
+        .kart {
+            --aci: 0deg;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            aspect-ratio: 1;
+            transform: translate(-50%, -50%) rotate(var(--aci)) translateY(clamp(-340px, -38vw, -245px)) rotate(calc(-1 * var(--aci)));
+            border: 0;
+            border-radius: 8px;
+            background: #ef4444;
+            box-shadow: 0 12px 24px rgb(15 23 42 / 20%);
+        }
+
+        .kart:nth-child(1) {
+            --aci: 0deg;
+            background: #ef4444;
+        }
+
+        .kart:nth-child(2) {
+            --aci: 60deg;
+            background: #f97316;
+        }
+
+        .kart:nth-child(3) {
+            --aci: 120deg;
+            background: #eab308;
+        }
+
+        .kart:nth-child(4) {
+            --aci: 180deg;
+            background: #22c55e;
+        }
+
+        .kart:nth-child(5) {
+            --aci: 240deg;
+            background: #14b8a6;
+        }
+
+        .kart:nth-child(6) {
+            --aci: 300deg;
+            background: #3b82f6;
+        }
+
+        @keyframes don {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .donen-kartlar {
+                width: 94vw;
+            }
+
+            .kart {
+                width: 76px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <nav class="navbar navbar-dark navbar-expand-lg bg-black px-3">
+            <h2 class="navbar-brand">My App</h2>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="sahne" aria-label="Otomatik dönen kartlar">
+            <div class="donen-kartlar">
+                <div class="kart"></div>
+                <div class="kart"></div>
+                <div class="kart"></div>
+                <div class="kart"></div>
+                <div class="kart"></div>
+                <div class="kart"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../WebTasarim/deneme/BOOTSTRAPLOCAL.JS"></script>
+    <script>
+        const kart = document.querySelectorAll('.kart');
+        kart.forEach(element => {
+
+        });
+    </script>
+</body>
+
+</html>

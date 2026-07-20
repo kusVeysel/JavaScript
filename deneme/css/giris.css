@@ -1,0 +1,11 @@
+.buton1 {
+    background: linear-gradient(to right, #198754 50%, rgb(113, 113, 113) 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: background-position 0.5s ease-in-out;
+}
+
+.buton1:hover {
+    background-position: 0% 0%;
+
+}
