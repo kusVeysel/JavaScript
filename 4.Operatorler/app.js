@@ -12,16 +12,16 @@
 let sayi1 = 4;
 let sayi2 = 2;
 console.error("----Aritmetik Operatörler----")
-console.log("sayi1 + sayi2 = " + (sayi1 + sayi2))
-console.log("sayi1 - sayi2 = " + (sayi1 - sayi2))
-console.log("sayi1 * sayi2 = " + (sayi1 * sayi2))
-console.log("sayi1 / sayi2 = " + (sayi1 / sayi2))
-console.log("sayi1 % sayi2 = " + (sayi1 % sayi2))
-console.log("sayi1**sayi2 = " + (sayi1 ** sayi2))
+console.log("sayi1 + sayi2 =", (sayi1 + sayi2))
+console.log("sayi1 - sayi2 =", (sayi1 - sayi2))
+console.log("sayi1 * sayi2 =", (sayi1 * sayi2))
+console.log("sayi1 / sayi2 =", (sayi1 / sayi2))
+console.log("sayi1 % sayi2 =", (sayi1 % sayi2))
+console.log("sayi1**sayi2 =", (sayi1 ** sayi2))
 sayi1++;
 sayi2--;
-console.log("sayi1++= " + sayi1);
-console.log("sayi2--= " + sayi2);
+console.log("sayi1++=", sayi1);
+console.log("sayi2--=", sayi2);
 
 
 console.error("----Atama Operatörler----")
@@ -36,13 +36,13 @@ console.error("----Atama Operatörler----")
 * **=: a=a**4 => a**=4
 */
 sayi1 = 4;
-console.log("sayi1 = 4 = " + sayi1)
-console.log("sayi1 += 4 =" + sayi1)
-console.log("sayi1 -= 4 = " + sayi1)
-console.log("sayi1 *= 4 =" + sayi1)
-console.log("sayi1 /= 4 = " + sayi1)
-console.log("sayi1 %= 4 =" + sayi1)
-console.log("sayi1 **= 4 = " + sayi1)
+console.log("sayi1 = 4 =", sayi1)
+console.log("sayi1 += 4 =", sayi1 += 4)
+console.log("sayi1 -= 4 =", sayi1 -= 4)
+console.log("sayi1 *= 4 =", sayi1 *= 4)
+console.log("sayi1 /= 4 =", sayi1 /= 4)
+console.log("sayi1 %= 4 =", sayi1 %= 4)
+console.log("sayi1 **= 4 =", sayi1 **= 4)
 
 
 console.error("----Mantıksal Operatörler----")
@@ -52,8 +52,8 @@ console.error("----Mantıksal Operatörler----")
 * ||: veya
 * !: değil
 */
-console.log("sayi1>4 && sayi2<2 = " + (sayi1 > 4 && sayi2 < 2))
-console.log("sayi1>4 || sayi2<2 = " + (sayi1 > 4 || sayi2 < 2))
+console.log("sayi1>4 && sayi2<2 =", (sayi1 > 4 && sayi2 < 2))
+console.log("sayi1>4 || sayi2<2 =", (sayi1 > 4 || sayi2 < 2))
 console.log("!sayi1 = " + (!sayi1))
 
 console.error("----Karşılaştırma Operatörler----")
@@ -68,13 +68,13 @@ console.error("----Karşılaştırma Operatörler----")
 * <=: küçük veya eşit mi operatörü
 * !=: eşit değil mi operatörü 
 */
-console.log("sayi1 > sayi2 = " + (sayi1 > sayi2))
-console.log("sayi1 < sayi2 = " + (sayi1 < sayi2))
-console.log("sayi1 <= sayi2 = " + (sayi1 <= sayi2))
-console.log("sayi1 >= sayi2 = " + (sayi1 >= sayi2))
-console.log("sayi1 == sayi2 = " + (sayi1 == sayi2))
-console.log("sayi1 === sayi2 = " + (sayi1 === sayi2))
-console.log("sayi1 != sayi2 = " + (sayi1 != sayi2))
+console.log("sayi1 > sayi2 =", (sayi1 > sayi2))
+console.log("sayi1 < sayi2 =", (sayi1 < sayi2))
+console.log("sayi1 <= sayi2 =", (sayi1 <= sayi2))
+console.log("sayi1 >= sayi2 =", (sayi1 >= sayi2))
+console.log("sayi1 == sayi2 =", (sayi1 == sayi2))
+console.log("sayi1 === sayi2 =", (sayi1 === sayi2))
+console.log("sayi1 != sayi2 =", (sayi1 != sayi2))
 
 
 
