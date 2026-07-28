@@ -13,10 +13,10 @@
 * join(): diziyi stringe çevirir, toStringden farkı ,araya eleman ekleyebiliriz
 
 * concat(): dizileri birleştirmek için kullanılır
-* slice(başlangıç indeksi ,kaç tane dilimleyeceği): diziyi istenilen yerden bölüp yeni bir dizi oluşturur
+* splice(başlangıç indeksi ,kaç tane dilimleyeceği): diziyi istenilen yerden bölüp yeni bir dizi oluşturur
 * lenght: dizinin uzunluğunu verir
 * reserve(): dizinin elemanlarını(indexlerini) ters çevirir
-* split(bölmek): belirli bir ifadeye göre bölüp diziyi çevirmek
+* split(separator): belirli bir ifadeye göre böler
 * indexOf(): elemanın index numarasını verir yoksa -1 döner
 * includes(): verilen elemanı içeriyor mu ona bakar, true false döner
 */
