@@ -9,5 +9,5 @@ sayilar[sayilar.length - 1] = "veysel";
 console.log(sayilar[10]);
 
 let karisik = [1, "veysel", 2.3, true, 'A'];
-//! JavaScriptte bir dizide fsrklı tipler olabilir , bu sadece JavaScripte özel bir durumdur
+//! JavaScriptte bir dizide farklı tipler olabilir , bu sadece JavaScripte özel bir durumdur
 console.log(karisik[3]);

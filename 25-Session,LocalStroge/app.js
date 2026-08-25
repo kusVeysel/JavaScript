@@ -7,12 +7,12 @@ let dizi = ['elma', 'karpuz', 'yumurta', 'ekmek'];
 sessionStorage.setItem("key1", "value1")
 sessionStorage.setItem("key2", "value2")
 sessionStorage.setItem("key3", "value3")
-sessionStorage.setItem("key4", JSON.stringify(dizi)) //! array olarak gider
+sessionStorage.setItem("key4", JSON.stringify(dizi)) //! dizi olarak gider
 
 let deger = sessionStorage.getItem("key2");
 console.log(deger);
 
-let a = JSON.parse(sessionStorage.getItem("key4")); //! array olarak gelir
+let a = JSON.parse(sessionStorage.getItem("key4")); //! dizi olarak gelir
 console.log(a);
 
 
