@@ -1,9 +1,8 @@
-//? Destructing Kullanımı
+//? Destructuring (parçalayarak atama) kullanımı
 
 let langs = ["C#", "C++", "JavaScript", "Python"];
 
 // let lang1, lang2, lang3, lang4;
-
 // lang1 = langs[0];
 // lang2 = langs[1];
 // lang3 = langs[2];
@@ -20,9 +19,9 @@ const person = {
     age: 18
 }
 
-let {firstName, lastName, country, age} = person;
+let { firstName, lastName, country, age } = person;
 
 console.log(firstName, lastName, country, age);
 
-// let {firstName:isim, lastName:soyisim, country:ulke, age:yas} = person;
-// console.log(isim, soyisim, ulke, yas);
+let { firstName: isim, lastName: soyisim, country: ulke, age: yas } = person;
+console.log(isim, soyisim, ulke, yas);

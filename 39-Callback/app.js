@@ -1,5 +1,5 @@
-//? Collback Yapısı
-//? Collback: Bir fonksiyonu bir fonksiyona parametre geçerek asenkron yapıyı senkrona çeviririz
+//? Callback Yapısı
+//* Callback: Bir fonksiyonu bir fonksiyona parametre geçerek asenkron yapıyı senkrona çeviririz
 
 // function getName(callback) {
 //     setTimeout(() => {
@@ -16,7 +16,7 @@
 
 // getName(getSurname);
 
-//* callback=getSurname
+//* callback = getSurname
 
 //// getName();
 //// getSurname();
@@ -38,8 +38,21 @@ function getSurname(callback) {
     }, 500);
 }
 
-getName((name)=>{
-    getSurname((surname)=>{
-        console.log(name ,surname);
+getName((name) => {
+    getSurname((surname) => {
+        console.log(name, surname);
     })
 })
+
+// Hata-ilk callback geleneğidir: ilk parametre hata, ikinci parametre sonuçtur.
+function getNumber(callback) {
+    setTimeout(() => callback(null, 5), 300);
+}
+
+getNumber((error, number) => {
+    if (error) {
+        console.error(error);
+        return;
+    }
+    console.log(`Callback sonucu: ${number}`);
+});

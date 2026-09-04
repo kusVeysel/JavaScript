@@ -1,4 +1,4 @@
-//? Session Stroge Ve Local Stroge
+//? sessionStorage ve localStorage
 //todo projeyi çalıştır => f12 => >> => Application
 
 
@@ -12,16 +12,20 @@ sessionStorage.setItem("key4", JSON.stringify(dizi)) //! dizi olarak gider
 let deger = sessionStorage.getItem("key2");
 console.log(deger);
 
-let a = JSON.parse(sessionStorage.getItem("key4")); //! dizi olarak gelir
+let kayitliDizi = sessionStorage.getItem("key4");
+let a = kayitliDizi ? JSON.parse(kayitliDizi) : []; //! JSON metni diziye çevrilir
 console.log(a);
 
+console.log(sessionStorage.key(1));
 
 // sessionStorage.clear();
 
 //* clear(): Temizler
-//* setItem(): Günceller
+//* setItem(): Günceller yoksa ekler
 //* getItem(): Seçer
+//* key(): İndex gibi
 
-//* localStorage sessionStroge ile aynı'dır
+//* localStorage API olarak benzerdir; sessionStorage sekme kapanınca,
+//* localStorage ise silinene kadar veriyi saklar.
 
-//! Veriler ne girersen gir string olar gider ve gelir
+//! Veriler ne girersen gir string olarak gider ve gelir

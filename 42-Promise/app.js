@@ -1,8 +1,7 @@
-//? Promiseler
-
+//? Promise
 /*
 * 1-pending: işleme(bekleme)
-* 2-fullfiiled(resolve): işlem başarılı(veri alındı) , then() ile yakalanır
+* 2-fulfilled(resolve): işlem başarılı(veri alındı) , then() ile yakalanır
 * 3-rejected: işlem reddedildi , catch() ile yakalanır
 */
 
@@ -50,28 +49,32 @@
 function readStudents(url) {
     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
-        try {
-            xhr.addEventListener("readystatechange", () => {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    try {
-                        const students = JSON.parse(xhr.responseText);
-                        resolve(students);
-                    } catch (error) {
-                        console.log("Jsonda problem var " + error);
-                        reject(error); 
-                    }
+        xhr.addEventListener("readystatechange", () => {
+            if (xhr.readyState === 4 && xhr.status >= 200 && xhr.status < 300) {
+                try {
+                    const students = JSON.parse(xhr.responseText);
+                    resolve(students);
+                } catch (error) {
+                    reject(error);
                 }
-            });
-        } catch (error) {
+            }
+            else if (xhr.readyState === 4) {
+                reject(new Error(`İstek başarısız oldu: ${xhr.status}`));
+            }
+        });
+        xhr.addEventListener("error", () => reject(new Error("Ağ hatası oluştu")));
+
+        try {
+            xhr.open("GET", url);
+            xhr.send();
+        }
+        catch (error) {
             reject(error);
         }
-
-        xhr.open("GET", url);
-        xhr.send();
     });
 }
 
 readStudents("students.json")
     .then((data) => { console.log(data); })
-    .catch((err) => { console.log(err); })
-
+    .catch((err) => { console.error(err); })
+    .finally(() => { console.log("İstek tamamlandı"); });

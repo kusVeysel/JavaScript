@@ -38,7 +38,7 @@ const kitapbul = kitapisim => {
     kitaptut.splice(0);
 };
 
-document.addEventListener('keypress', (e) => {
+document.addEventListener('keydown', (e) => {
     if (e.key === "Enter") {
         kitapbul(document.getElementById('ara').value);
     }

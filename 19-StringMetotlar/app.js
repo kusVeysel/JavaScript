@@ -1,5 +1,4 @@
 //? String Metotlar
-
 /*
 * charAt(): Metnin içinden karakter döner
 * concat(): iki ya da daha fazla stringi birleştirir
@@ -9,11 +8,11 @@
 * toLowerCase(): Stringi Küçük Harflere Çevirmek için kullanılır
 * trim(): sağdan ve soldan boşlukları kaldırır
 * slice(kaçıncı indekste başlayacak, kaçıncı indekste bitecek): stringi böler 
-* substring(kaçıncı indeksten başlayacak, kaçıncı indekste bitecek): slice'ten farkı yok
+* substring(kaçıncı indeksten başlayacak, kaçıncı indekste bitecek): negatif değerleri 0 kabul eder
 * replace(Değişecek Veri,Yerine Gelecek Veri): Yer Değiştirir
 * split(): Stringi diziye çevirir
-* valueOf():
-* stratWith(): Belirtilen stringle mi başlıyor diye kontrol eder, true false döner
+* valueOf(): string ilkel değerini döner
+* startsWith(): Belirtilen stringle mi başlıyor diye kontrol eder
 * endsWith(): Belirtilen stringle mi bitiyor diye kontrol eder, true false döner
 */
 
@@ -41,19 +40,19 @@ console.log(`kurs.toLowerCase() => ${kucuk}`);
 let bos = kurs.trim();
 console.log(`kurs.trim() => ${bos}`);
 
-let dilimleyici = kurs.slice(7,12);
+let dilimleyici = kurs.slice(7, 12);
 console.log(`kurs.slice(7,12) => ${dilimleyici}`);
 
-let subs = kurs.substring(7,12);
+let subs = kurs.substring(7, 12);
 console.log(`kurs.substring(7,12) => ${subs}`);
 
-let degis = kurs.replace("Modern","Guncel");
+let degis = kurs.replace("Modern", "Guncel");
 console.log(`kurs.replace("Modern","Guncel") => ${degis}`);
 
 let dizi = kurs.split(" ");
 console.log(dizi);
 
-// console.log(`kurs.valuesOf() => ${kurs.valueOf()}`);
+console.log(`kurs.valueOf() => ${kurs.valueOf()}`);
 
 console.log(`kurs.startsWith("Mode") => ${kurs.startsWith("Mode")}`);
 

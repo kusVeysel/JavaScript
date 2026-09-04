@@ -20,3 +20,17 @@ switch (sayi) {
         console.log("Girilen sayı 1 ile 5 arasında olmalıdır");
         break;
 }
+
+//* switch - case, tek bir ifadenin farklı sabit değerlerle karşılaştırılmasıdır. if - else gibidir.
+
+//* break burada döngüden değil, switch bloğundan çıkar. Yazılmazsa fall-through olur.
+
+
+// Fall-through: break kullanılmadığında sonraki case de çalışır.
+switch ("uyarı") {
+    case "uyarı":
+        console.log("Kontrol gerekli");
+    case "bilgi":
+        console.log("Mesaj gösterildi");
+        break;
+}

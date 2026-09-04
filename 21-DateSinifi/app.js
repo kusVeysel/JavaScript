@@ -1,7 +1,7 @@
 //? Date Kullanımı
 
 /*
-?GET getirmek için
+? GET (getirmek için)
 
 * getFullYear(): Yılı verir
 * getDay(): Haftanın kaçıncı günde olduğunu verir
@@ -15,7 +15,7 @@
 * toLocaleTimeString(): Saat.Dakika.Saniye'ye local olarak stringe çevirir
 * toLocaleString():toLocaleDateString() toLocaleTimeString() beraber verir
 
-?SET güncellemek için yukardakilerle aynı metotlar
+? SET (güncellemek için setFullYear, setMonth gibi metotlar)
 */
 
 let tarih = new Date();
@@ -33,5 +33,15 @@ console.log(`tarih.getSeconds() => ${tarih.getSeconds()}`);
 console.log(`tarih.toLocaleDateString() => ${tarih.toLocaleDateString()}`);
 console.log(`tarih.toLocaleTimeString() => ${tarih.toLocaleTimeString()}`);
 console.log(`tarih.toLocaleString() => ${tarih.toLocaleString()}`);
+
+// getDay() haftanın gününü 0 = Pazar ... 6 = Cumartesi olarak verir.
+// getMonth() 0 tabanlıdır: Ocak 0, Aralık 11 değerini taşır.
+const kopyaTarih = new Date(tarih);
+kopyaTarih.setFullYear(tarih.getFullYear() + 1);
+kopyaTarih.setMonth(0);
+console.log(`Bir sonraki yılın ocak ayı => ${kopyaTarih.toLocaleDateString()}`);
+
+const gecersizTarih = new Date("geçersiz tarih");
+console.log(`Geçerli tarih mi? ${!Number.isNaN(gecersizTarih.getTime())}`);
 
 

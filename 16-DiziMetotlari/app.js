@@ -1,5 +1,4 @@
 //? Dizi Methodları
-
 /*
 * push(): dizinin sonuna eleman ekler , dizini uzunluğunu döner
 * unshift(): dizinin başına eleman ekler , eleman sayısını geri döner
@@ -13,10 +12,10 @@
 * join(): diziyi stringe çevirir, toStringden farkı ,araya eleman ekleyebiliriz
 
 * concat(): dizileri birleştirmek için kullanılır
-* splice(başlangıç indeksi ,kaç tane dilimleyeceği): diziyi istenilen yerden bölüp yeni bir dizi oluşturur
-* lenght: dizinin uzunluğunu verir
-* reserve(): dizinin elemanlarını(indexlerini) ters çevirir
-* split(separator): belirli bir ifadeye göre böler
+* slice(başlangıç indeksi, bitiş indeksi): orijinali değiştirmeden bir bölümün kopyasını oluşturur
+* length: dizinin uzunluğunu verir
+* reverse(): dizinin elemanlarını(indexlerini) ters çevirir
+* split(separator): string metodudur; metni belirli bir ifadeye göre diziye böler
 * indexOf(): elemanın index numarasını verir yoksa -1 döner
 * includes(): verilen elemanı içeriyor mu ona bakar, true false döner
 */
@@ -47,8 +46,8 @@ arabalar.splice(0, 0, "turbo");
 console.log("splice(0,0,'turbo') => " + arabalar)
 
 console.error("TOSTRİNG");
-arabalar.toString();
-console.log("toString() => " + arabalar);
+let arabalarMetin = arabalar.toString();
+console.log("toString() => " + arabalarMetin);
 
 console.error("JOİN");
 let arabalar2 = arabalar.join("-");
@@ -59,16 +58,16 @@ console.error("CONCAT");
 let birlesmis = arabalar.concat(meyveler);
 console.log("concat('meyveler) => " + birlesmis);
 
-console.error("SPLİCE")
-let ayridizi = birlesmis.splice(2, 7);
-console.log("splice(2,7) => " + ayridizi);
+console.error("SLİCE")
+let ayridizi = birlesmis.slice(2, 9);
+console.log("slice(2,9) => " + ayridizi);
 
-console.error("LENGHT");
-console.log("lenght => " + birlesmis.length);
+console.error("LENGTH");
+console.log("length => " + birlesmis.length);
 
-console.error("RESERVE");
+console.error("REVERSE");
 arabalar.reverse();
-console.log("reserve() => " + arabalar);
+console.log("reverse() => " + arabalar);
 
 let isimler = "ali,veli,deli";
 console.error("SPLİT");
@@ -82,3 +81,15 @@ console.log("indexOf('karpuz') => " + index);
 console.error("INCLUDES");
 let sonuc = arabalar.includes("porshe");
 console.log("includes('porche') => " + sonuc);
+
+//? Fonksiyonel dizi metotları yeni bir sonuç üretir; kaynak diziyi değiştirmez.
+const fiyatlar = [10, 25, 40, 60];
+console.log("map() =>", fiyatlar.map((fiyat) => fiyat * 2));
+console.log("filter() =>", fiyatlar.filter((fiyat) => fiyat >= 25));
+console.log("find() =>", fiyatlar.find((fiyat) => fiyat > 30));
+console.log("some() =>", fiyatlar.some((fiyat) => fiyat > 50));
+console.log("every() =>", fiyatlar.every((fiyat) => fiyat > 0));
+console.log("reduce() =>", fiyatlar.reduce((toplam, fiyat) => toplam + fiyat, 0));
+
+// sort() varsayılan olarak metin sıralaması yapar; sayılar için karşılaştırıcı verilir.
+console.log("sort() =>", [...fiyatlar].sort((birinci, ikinci) => birinci - ikinci));

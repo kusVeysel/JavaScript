@@ -20,12 +20,12 @@ let urunler = [
     {
         id: 4,
         isim: "LENOVO V15",
-        kategori: "Tekmoloji",
+        kategori: "Teknoloji",
         fiyat: 10.999
     },
     {
         id: 5,
-        isim: "LENOVO Idepad",
+        isim: "LENOVO Ideapad",
         kategori: "Teknoloji",
         fiyat: 4.510
     },
@@ -37,17 +37,21 @@ let urunler = [
     }
 ]
 
-let kullaniciUrunIsmi = prompt("Bir Ürün İsmi Giriniz").toUpperCase();
+let kullaniciGirisi = prompt("Bir Ürün İsmi Giriniz");
+let kullaniciUrunIsmi = kullaniciGirisi ? kullaniciGirisi.trim().toUpperCase() : "";
 FiltreliUrunleriDoldur(urunler);
 
 
 function FiltreliUrunleriDoldur(urunler) {
-    let filtreliUrunler = [];
-    urunler.forEach((urun) => {
-        if (urun.isim.toUpperCase().includes(kullaniciUrunIsmi)) {
-            filtreliUrunler.push(urun);
-        }
-    });
+    if (kullaniciUrunIsmi === "") {
+        alert("Arama iptal edildi veya boş bırakıldı.");
+        return;
+    }
+
+    // filter(), koşulu sağlayan ürünleri yeni bir diziye alır.
+    let filtreliUrunler = urunler.filter((urun) =>
+        urun.isim.toUpperCase().includes(kullaniciUrunIsmi)
+    );
     if (filtreliUrunler.length > 0) {
         FiltreliUrunleriYazdir(filtreliUrunler);
     }

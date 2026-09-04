@@ -42,7 +42,6 @@ function filter(e) {
     else{
         showAlert("warning","Filtreleme yapmak için en az 1 todo olmalıdır");
     }
-
 }
 
 function allTodosDeleteFromEveryWhere() {
@@ -58,7 +57,6 @@ function allTodosDeleteFromEveryWhere() {
     else {
         showAlert("warning", "Silmek için En Az 1 Todo Olmalıdır");
     }
-
 }
 
 function removeTodoToUI(e) {
@@ -81,7 +79,6 @@ function removeTodoToStroge(removeTodo) {
     })
     localStorage.setItem("todos", JSON.stringify(todos));
 }
-
 
 function addTodo(e) {
     const inputText = addInput.value.trim();
@@ -122,7 +119,6 @@ function addTodoToStroge(newTodo) {
     todos.push(newTodo);
     localStorage.setItem("todos", JSON.stringify(todos));
 }
-
 
 function checkTodosFromStroge() {
     if (localStorage.getItem("todos") == null) {

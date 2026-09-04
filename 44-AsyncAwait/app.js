@@ -1,4 +1,5 @@
 //? ASYNC AWAİT
+//* Promise işlemlerini senkron görünümlü ve okunabilir biçimde yazmayı sağlar.
 
 //// Colback
 //// Promise
@@ -20,12 +21,22 @@
 // })
 
 document.querySelector("#button").addEventListener("click", async () => {
-    const responsePost = await fetch("https://jsonplaceholder.typicode.com/posts/1")
-    const post = await responsePost.json();
-    const responseComments = await fetch(`https://jsonplaceholder.typicode.com/comments?postId=${post.id}`)
-    const comments = await responseComments.json();
-    console.log(comments);
-    console.log(responsePost);
+    try {
+        const responsePost = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+        if (!responsePost.ok) throw new Error(`Gönderi alınamadı: ${responsePost.status}`);
+        const post = await responsePost.json();
+        const responseComments = await fetch(`https://jsonplaceholder.typicode.com/comments?postId=${post.id}`);
+        if (!responseComments.ok) throw new Error(`Yorumlar alınamadı: ${responseComments.status}`);
+        const comments = await responseComments.json();
+        console.log(comments);
+        console.log(responsePost);
+    }
+    catch (error) {
+        console.error("İstek sırasında hata oluştu:", error);
+    }
+    finally {
+        console.log("İşlem tamamlandı");
+    }
 });
 
 

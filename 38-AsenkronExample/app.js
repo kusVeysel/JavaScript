@@ -49,5 +49,3 @@ getPostByUserId(userId);
 //* callback
 //* promise
 //* async-await
-
-

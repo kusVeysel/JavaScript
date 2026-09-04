@@ -6,12 +6,12 @@ let names = ["Ahmet", "Mehmet", "Ayşe", "Fatma"];
 for (let name in names) {
     console.log(name);
 }
-//! For in döngüsü İndex döner ,dizi adı değil 
-//! diziadı[değişkenadı] şeklide değerlere erişilebilir
+//! For in döngüsü index döner, dizi adı değil 
+//! dizi_adı[değişken_adı] şeklide değerlere erişilebilir
 
-
-for (let isim of names) {
-    console.log(isim);
+//* For of döngüsü
+for (let name of names) {
+    console.log(name);
 }
 //! For of döngüsü değeri döner
-//! diziadı.indexOf(değişkenadı) şeklinde indexlere erişilebilir
+//! dizi_adı.indexOf(değişken_adı) şeklinde indexlere erişilebilir

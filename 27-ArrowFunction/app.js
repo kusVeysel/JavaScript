@@ -1,4 +1,5 @@
 //? Arrow Function
+//* () => {}
 
 // function yazdir() {
 //     console.log("merhaba");
@@ -9,8 +10,7 @@ const yazdir = () => {
 }
 yazdir();
 
-const yazdir2 = (firstname,lastname) => {
-    console.log("merhaba" + firstname,lastname);
+const yazdir2 = (firstname, lastname) => {
+    console.log("merhaba" + firstname, lastname);
 }
-yazdir2("Veysel","Kuş");
-
+yazdir2("Veysel", "Kuş");
