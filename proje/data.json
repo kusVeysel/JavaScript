@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Logitech G Pro X",
+        "category": "Klavye",
+        "brand": "Logitech",
+        "price": 2499,
+        "stock": 18,
+        "rating": 4.7,
+        "reviewCount": 324,
+        "discount": 15,
+        "isFeatured": true,
+        "description": "Oyuncular için tasarlanmış mekanik klavye.",
+        "image": "images/logitech-g-pro-x.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Razer DeathAdder V3",
+        "category": "Mouse",
+        "brand": "Razer",
+        "price": 1899,
+        "stock": 25,
+        "rating": 4.8,
+        "reviewCount": 512,
+        "discount": 10,
+        "isFeatured": true,
+        "description": "Hafif ve yüksek hassasiyetli oyuncu mouse'u.",
+        "image": "images/razer-deathadder-v3.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Samsung Odyssey G5",
+        "category": "Monitör",
+        "brand": "Samsung",
+        "price": 8499,
+        "stock": 7,
+        "rating": 4.6,
+        "reviewCount": 189,
+        "discount": 20,
+        "isFeatured": false,
+        "description": "144Hz yenileme hızına sahip oyuncu monitörü.",
+        "image": "images/samsung-odyssey-g5.jpg"
+    },
+    {
+        "id": 4,
+        "name": "HyperX Cloud III",
+        "category": "Kulaklık",
+        "brand": "HyperX",
+        "price": 3299,
+        "stock": 12,
+        "rating": 4.5,
+        "reviewCount": 276,
+        "discount": 5,
+        "isFeatured": false,
+        "description": "Konforlu tasarıma ve güçlü ses performansına sahip oyuncu kulaklığı.",
+        "image": "images/hyperx-cloud-3.jpg"
+    },
+    {
+        "id": 5,
+        "name": "AMD Ryzen 7 7800X3D",
+        "category": "İşlemci",
+        "brand": "AMD",
+        "price": 12499,
+        "stock": 9,
+        "rating": 4.9,
+        "reviewCount": 841,
+        "discount": 12,
+        "isFeatured": true,
+        "description": "Yüksek performanslı masaüstü işlemci.",
+        "image": "images/ryzen-7800x3d.jpg"
+    }
+]

@@ -42,6 +42,18 @@ let giriscontrol = (kullaniciadi, sifre) => {
     }
 };
 
+class Kullanici {
+    constructor(id, name, surname, username, password, email, phone) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.phone = phone;
+    }
+}
+
 let kayitol = () => {
     let name = document.getElementById("isim");
     let surname = document.getElementById("soyisim");
@@ -67,15 +79,7 @@ let kayitol = () => {
     if (gec == 6) {
         gec = 0;
 
-        let yeniKullanici = {
-            id: localStorage.length + 1,
-            name: name.value,
-            surname: surname.value,
-            username: username.value,
-            password: password.value,
-            email: email.value,
-            phone: phone.value
-        };
+        const yeniKullanici = new Kullanici(localStorage.length + 1, name.value, surname.value, username.value, password.value, email.value, phone.value);
 
         localStorage.setItem(`kullanici${yeniKullanici.id}`, JSON.stringify(yeniKullanici));
         toastr.success("Kayıt başarılı");
