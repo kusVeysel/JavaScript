@@ -1,4 +1,4 @@
-let giriscontrol = (kullaniciadi, sifre) => {
+const giriscontrol = (kullaniciadi, sifre) => {
 
     let has = false;
 
@@ -54,7 +54,7 @@ class Kullanici {
     }
 }
 
-let kayitol = () => {
+const kayitol = () => {
     let name = document.getElementById("isim");
     let surname = document.getElementById("soyisim");
     let username = document.getElementById("kullaniciadi");
@@ -88,3 +88,33 @@ let kayitol = () => {
         }, 1000);
     }
 };
+
+const getdata = async url => {
+    return await fetch(url)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`İstek başarısız oldu: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then((data) => {
+            document.getElementById("tbody").innerHTML = data.map((urun) => `
+                <tr>
+                    <td>${urun.name}</td>
+                    <td>${urun.category}</td>
+                    <td>${urun.brand}</td>
+                    <td>${urun.price}</td>
+                    <td>${urun.stock}</td>
+                    <td>${urun.rating}</td>
+                    <td>${urun.reviewCount}</td>
+                    <td>${urun.discount}%</td>
+                    <td>${urun.isFeatured ? "Evet" : "Hayır"}</td>
+                    <td>${urun.description}</td>
+                    <td><img src="${urun.image}" alt="${urun.name}" width="80"></td>
+                </tr>
+            `).join("");
+        })
+        .catch((err) => alert(err))
+}
+if (window.location.pathname.endsWith("/Anasayfa.html"))
+    getdata("data.json");

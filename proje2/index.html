@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JavaScript konularini tek uygulamada gosteren interaktif kampus.">
+    <title>JS Kampusu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="brand" href="#genel-bakis" data-view-link="genel-bakis">
+                <span class="brand-mark">JS</span>
+                <span>
+                    <strong>JS Kampusu</strong>
+                    <small>Ogrenme panosu</small>
+                </span>
+            </a>
+
+            <nav class="main-nav" aria-label="Ana navigasyon">
+                <button class="nav-link active" data-view="genel-bakis"><span>01</span> Genel bakis</button>
+                <button class="nav-link" data-view="urunler"><span>02</span> Urun kesfi</button>
+                <button class="nav-link" data-view="gorevler"><span>03</span> Gorev tahtasi</button>
+                <button class="nav-link" data-view="laboratuvar"><span>04</span> JS laboratuvari</button>
+            </nav>
+
+            <div class="sidebar-note">
+                <span class="pulse-dot"></span>
+                <div>
+                    <strong>Canli calisma alani</strong>
+                    <small>Verilerin tarayicinda saklanir.</small>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">JavaScript pratik alani</p>
+                    <h1 id="page-title">Genel bakis</h1>
+                </div>
+                <div class="topbar-actions">
+                    <span class="clock" id="live-clock">--:--</span>
+                    <button class="icon-button" id="theme-toggle" type="button" title="Tema degistir"
+                        aria-label="Tema degistir">◐</button>
+                </div>
+            </header>
+
+            <section class="view active-view" id="genel-bakis" data-view-panel>
+                <div class="hero-grid">
+                    <div class="hero-panel">
+                        <div class="hero-copy">
+                            <p class="eyebrow light">Bugunun rotasi</p>
+                            <h2>Fikirden calisan koda.</h2>
+                            <p>JavaScript'in temel konularini tek bir uygulamada kesfet, dene ve kendi ilerlemeni takip
+                                et.</p>
+                            <button class="primary-button" type="button" data-view-target="laboratuvar">Laboratuvari ac
+                                <span>→</span></button>
+                        </div>
+                        <div class="hero-orbit" aria-hidden="true"><span>JS</span><i></i><i></i><i></i></div>
+                    </div>
+                    <div class="quote-panel">
+                        <span class="quote-mark">“</span>
+                        <blockquote id="daily-quote">Kucuk fonksiyonlar, buyuk fikirleri tasir.</blockquote>
+                        <p id="quote-author">— JS Kampusu</p>
+                        <button class="text-button" id="new-quote" type="button">Yeni not getir ↗</button>
+                    </div>
+                </div>
+
+                <div class="stats-grid" id="dashboard-stats"></div>
+
+                <div class="content-grid two-columns">
+                    <article class="panel wallet-panel">
+                        <div class="panel-heading">
+                            <div>
+                                <p class="eyebrow">ATM simulatoru</p>
+                                <h2>Calisma cuzdani</h2>
+                            </div>
+                            <span class="status-pill" id="account-type">Birikim hesabi</span>
+                        </div>
+                        <div class="balance-card">
+                            <span>Guncel bakiye</span>
+                            <strong id="balance-value">₺0</strong>
+                            <small id="balance-message">Hesap hazir.</small>
+                        </div>
+                        <div class="wallet-form">
+                            <label for="wallet-amount">Tutar</label>
+                            <div class="input-action-row">
+                                <input id="wallet-amount" type="number" min="1" step="1" placeholder="Orn. 250">
+                                <button class="secondary-button" type="button" id="deposit-button">Para yatir</button>
+                                <button class="outline-button" type="button" id="withdraw-button">Para cek</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="panel async-panel">
+                        <div class="panel-heading">
+                            <div>
+                                <p class="eyebrow">Asenkron akış</p>
+                                <h2>Veri istasyonu</h2>
+                            </div>
+                            <span class="status-dot" id="api-status">Hazir</span>
+                        </div>
+                        <p class="panel-description">Fetch, Promise ve hata kontrolu ile yerel urun verisini getir.</p>
+                        <div class="async-result" id="async-result">Istek baslatilmadi.</div>
+                        <div class="button-row">
+                            <button class="primary-button small" id="load-async" type="button">Async/Await ile
+                                getir</button>
+                            <button class="ghost-button" id="load-xhr" type="button">XHR dene</button>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="section-heading compact-heading">
+                    <div>
+                        <p class="eyebrow">Ogrenme haritasi</p>
+                        <h2>Bu projede neler var?</h2>
+                    </div>
+                </div>
+                <div class="topic-grid" id="topic-grid"></div>
+            </section>
+
+            <section class="view" id="urunler" data-view-panel>
+                <div class="section-heading page-heading">
+                    <div>
+                        <p class="eyebrow">Dizi metotlari + Fetch API</p>
+                        <h2>Urun kesfi</h2>
+                        <p class="section-description">Arama, filtreleme, siralama, map ve filter islemlerini canli
+                            veriyle dene.</p>
+                    </div>
+                    <button class="outline-button" id="refresh-products" type="button">↻ Yenile</button>
+                </div>
+                <div class="toolbar panel">
+                    <label class="search-field" for="product-search"><span>⌕</span><input id="product-search"
+                            type="search" placeholder="Urun, marka veya kategori ara..."></label>
+                    <select id="category-filter" aria-label="Kategori filtresi">
+                        <option value="all">Tum kategoriler</option>
+                    </select>
+                    <select id="sort-products" aria-label="Urunleri sirala">
+                        <option value="featured">One cikanlar</option>
+                        <option value="price-low">Fiyat: dusukten yuksege</option>
+                        <option value="price-high">Fiyat: yuksekten dusuge</option>
+                        <option value="rating">Puan</option>
+                    </select>
+                </div>
+                <div class="results-line"><span id="product-count">0 urun</span><span id="product-search-hint">Tum
+                        katalog</span></div>
+                <div class="product-grid" id="product-grid"></div>
+            </section>
+
+            <section class="view" id="gorevler" data-view-panel>
+                <div class="section-heading page-heading">
+                    <div>
+                        <p class="eyebrow">DOM + localStorage + event delegation</p>
+                        <h2>Gorev tahtasi</h2>
+                        <p class="section-description">Kucuk hedeflerini ekle, tamamla ve tarayicida kalici tut.</p>
+                    </div>
+                    <div class="task-progress"><strong id="task-progress-value">0%</strong><span>tamamlandi</span></div>
+                </div>
+                <div class="task-layout">
+                    <article class="panel task-form-panel">
+                        <form id="task-form">
+                            <label for="task-input">Yeni hedef</label>
+                            <div class="task-input-row"><input id="task-input" type="text" maxlength="90"
+                                    placeholder="Orn. map ve filter tekrar et" required><button class="primary-button"
+                                    type="submit">Ekle <span>+</span></button></div>
+                        </form>
+                        <div class="task-tools">
+                            <div class="segmented-control" role="group" aria-label="Gorev filtresi">
+                                <button class="segment active" type="button" data-task-filter="all">Tumu</button>
+                                <button class="segment" type="button" data-task-filter="active">Aktif</button>
+                                <button class="segment" type="button" data-task-filter="done">Biten</button>
+                            </div>
+                            <button class="text-button danger" type="button" id="clear-done">Bitenleri temizle</button>
+                        </div>
+                    </article>
+                    <div class="task-list" id="task-list"></div>
+                </div>
+            </section>
+
+            <section class="view" id="laboratuvar" data-view-panel>
+                <div class="section-heading page-heading">
+                    <div>
+                        <p class="eyebrow">Temel dil + koleksiyonlar + OOP</p>
+                        <h2>JS laboratuvari</h2>
+                        <p class="section-description">Degiskenlerden siniflara kadar temel konulari kucuk deneylerle
+                            uygula.</p>
+                    </div>
+                </div>
+                <div class="lab-grid">
+                    <article class="panel lab-card">
+                        <div class="lab-icon orange">01</div>
+                        <h3>Not hesaplayici</h3>
+                        <p>if/else, operatorler, Number ve ternary.</p>
+                        <label for="score-input">Notun</label><input id="score-input" type="number" min="0" max="100"
+                            placeholder="0 - 100"><button class="secondary-button full" id="score-check"
+                            type="button">Sonucu goster</button>
+                        <div class="lab-output" id="score-output">Bir not gir.</div>
+                    </article>
+                    <article class="panel lab-card">
+                        <div class="lab-icon blue">02</div>
+                        <h3>Metin mercegi</h3>
+                        <p>trim, toUpperCase, includes, split ve reduce.</p>
+                        <label for="text-input">Metin</label><input id="text-input" type="text"
+                            placeholder="JavaScript ogreniyorum">
+                        <div class="character-meter"><span id="text-meter"></span></div>
+                        <div class="lab-output" id="text-output">Yazmaya basla.</div>
+                    </article>
+                    <article class="panel lab-card">
+                        <div class="lab-icon green">03</div>
+                        <h3>Set ve Map kutusu</h3>
+                        <p>Tekrarsiz etiketler ve anahtar-deger yapisi.</p>
+                        <label for="tag-input">Etiket ekle</label>
+                        <div class="inline-input"><input id="tag-input" type="text" placeholder="Orn. dom"><button
+                                class="secondary-button" id="tag-add" type="button">Ekle</button></div>
+                        <div class="tag-list" id="tag-list"></div>
+                        <div class="lab-output" id="map-output">Map bekliyor.</div>
+                    </article>
+                    <article class="panel lab-card">
+                        <div class="lab-icon pink">04</div>
+                        <h3>Tarih ve matematik</h3>
+                        <p>Date, Math.random, round, min ve max.</p>
+                        <div class="date-display" id="date-display">--</div><button class="outline-button full"
+                            id="random-number" type="button">Sansli sayi uret</button>
+                        <div class="lab-output" id="random-output">1 ile 100 arasinda.</div>
+                    </article>
+                    <article class="panel lab-card wide-lab-card">
+                        <div class="lab-icon purple">05</div>
+                        <h3>Callback sirasi</h3>
+                        <p>Asenkron islemlerin hangi sirayla tamamlandigini izle.</p>
+                        <div class="timeline" id="callback-timeline"><span class="muted">Deney baslatilmadi.</span>
+                        </div><button class="primary-button small" id="run-callback" type="button">Deneyi
+                            baslat</button>
+                    </article>
+                    <article class="panel lab-card wide-lab-card">
+                        <div class="lab-icon teal">06</div>
+                        <h3>Nesne laboratuvari</h3>
+                        <p>Class, static, inheritance, this ve super birlikte.</p>
+                        <div class="object-output" id="object-output"></div><button class="secondary-button small"
+                            id="create-object" type="button">Yeni nesne olustur</button>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div class="toast-region" id="toast-region" aria-live="polite"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>

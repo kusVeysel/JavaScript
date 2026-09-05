@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dönen Kartlar</title>
-    <link rel="stylesheet" href="../../WebTasarim/CDN/BootstrapCDN.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -16,8 +16,6 @@
             overflow: hidden;
             background: #f2f4f7;
         }
-
-
     </style>
 </head>
 
@@ -39,32 +37,36 @@
             </div>
         </nav>
 
-        <section>
-            
-            <table>
-                <thead>
-                    <th>
-                        <tr></tr>
-                    </th>
-                </thead>
-                <tbody>
-                    <td>
-                        <tr></tr>
-                    </td>
-                </tbody>
-                <tfoot>
-                    <td>
-                        <tr></tr>
-                    </td>
-                </tfoot>
+        <section class="d-flex  mt-5 mx-5">
+            <div class=" w-100">
 
-            </table>
+                <table class="table table-striped table-bordered table-hover text-center ">
+                    <thead>
+                        <tr>
+                            <th>name</th>
+                            <th>category</th>
+                            <th>brand</th>
+                            <th>price</th>
+                            <th>stock</th>
+                            <th>rating</th>
+                            <th>reviewCount</th>
+                            <th>discount</th>
+                            <th>isFeatured</th>
+                            <th>description</th>
+                            <th>image</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </div>
 
         </section>
 
     </main>
 
-    <script src="../../WebTasarim/CDN/BootstrapCDN.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
