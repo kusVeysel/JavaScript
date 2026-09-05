@@ -23,8 +23,8 @@ console.log(sessionStorage.key(1));
 //* clear(): Temizler
 //* setItem(): Günceller yoksa ekler
 //* getItem(): Seçer
-//* key(): İndex gibi
 
+//* key(): İndex gibi, sessionStorage.key(0) → 0.indexteki key'i getirir.
 //* localStorage API olarak benzerdir; sessionStorage sekme kapanınca,
 //* localStorage ise silinene kadar veriyi saklar.
 

@@ -2,12 +2,16 @@ let giriscontrol = (kullaniciadi, sifre) => {
 
     let has = false;
 
-    if (kullaniciadi.trim() === "") {
-        toastr.warning("Kullanıcı adı giriniz");
+    if (kullaniciadi.trim() === "" && sifre.trim() === "") {
+        toastr.warning("Kullanıcı adı ve şifre giriniz");
         return;
     }
     else if (sifre.trim() === "") {
         toastr.warning("Şifre giriniz");
+        return;
+    }
+    else if (kullaniciadi.trim() === "") {
+        toastr.warning("Kullanıcı adı giriniz");
         return;
     }
 
@@ -47,54 +51,18 @@ let kayitol = () => {
     let phone = document.getElementById("telefon");
     let gec = 0;
 
-    if (name.value.trim() === "") {
-        toastr.warning("Adınızı giriniz");
-        name.style.setProperty("border", "2px solid red", "important");
-    }
-    else {
-        name.style.setProperty("border", "2px solid green", "important");
-        gec++;
-    }
-    if (surname.value.trim() === "") {
-        toastr.warning("Soyadınızı giriniz");
-        surname.style.setProperty("border", "2px solid red", "important");
-    }
-    else {
-        surname.style.setProperty("border", "2px solid green", "important");
-        gec++;
-    }
-    if (username.value.trim() === "") {
-        toastr.warning("Kullanıcı adınızı giriniz");
-        username.style.setProperty("border", "2px solid red", "important");
-    }
-    else {
-        username.style.setProperty("border", "2px solid green", "important");
-        gec++;
-    }
-    if (password.value.trim() === "") {
-        toastr.warning("Şifrenizi giriniz");
-        password.style.setProperty("border", "2px solid red", "important");
-    }
-    else {
-        password.style.setProperty("border", "2px solid green", "important");
-        gec++;
-    }
-    if (phone.value.trim() === "") {
-        toastr.warning("Telefon numaranızı giriniz");
-        phone.style.setProperty("border", "2px solid red", "important");
-    }
-    else {
-        phone.style.setProperty("border", "2px solid green", "important");
-        gec++;
-    }
-    if (email.value.trim() === "") {
-        toastr.warning("Emailinizi giriniz");
-        email.style.setProperty("border", "2px solid red", "important");
-    }
-    else {
-        email.style.setProperty("border", "2px solid green", "important");
-        gec++;
-    }
+    const kayit = [name, surname, username, password, email, phone];
+
+    kayit.forEach((item) => {
+        if (item.value.trim() === "") {
+            toastr.warning(item.getAttribute("data-uyari"));
+            item.style.setProperty("border", "2px solid red", "important");
+        }
+        else {
+            item.style.setProperty("border", "2px solid green", "important");
+            gec++;
+        }
+    });
 
     if (gec == 6) {
         gec = 0;
