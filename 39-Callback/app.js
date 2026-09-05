@@ -1,6 +1,8 @@
 //? Callback Yapısı
 //* Callback: Bir fonksiyonu bir fonksiyona parametre geçerek asenkron yapıyı senkrona çeviririz
 
+//? 1.Kullanım
+
 // function getName(callback) {
 //     setTimeout(() => {
 //         console.log("Veysel");

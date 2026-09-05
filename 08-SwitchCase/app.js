@@ -26,7 +26,7 @@ switch (sayi) {
 //* break burada döngüden değil, switch bloğundan çıkar. Yazılmazsa fall-through olur.
 
 
-// Fall-through: break kullanılmadığında sonraki case de çalışır.
+//? Fall-through: break kullanılmadığında sonraki tüm caseler de çalışır.
 switch ("uyarı") {
     case "uyarı":
         console.log("Kontrol gerekli");

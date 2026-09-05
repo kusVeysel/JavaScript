@@ -15,7 +15,7 @@ else {
 //* Bir karar yapısında birden fazla "else if" bloğu olabilir veya "else" bloğu olmayabilir ama "if" bloğu olmak zorunda direk "else if" veya "else" yazılamaz.
 //* Şart(koşul) sağlanırsa o blok çalışır, diğer hiçbir blok çalışmaz.
 
-//* Template Literals: `${değişken_adı}`; : string içinde değişken yazmamızı sağlayan çok kullanışlı bir yoldur
+//* Template Literals: `${değişken_adı}`; : string içinde değişken yazmamızı sağlayan çok kullanışlı bir yoldur.
 
 let bool = true;
 const sonuc = bool ? "Değer true" : "Değer false";

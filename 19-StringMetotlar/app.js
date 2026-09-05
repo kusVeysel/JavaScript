@@ -19,42 +19,55 @@
 let kurs = "Modern Web Geliştirme Kursu";
 let tarih = "2026";
 
+console.error("charAt()");
 let karakter = kurs.charAt(5);
 console.log(`kurs.charAt(5) => ${karakter}`);
 
+console.error("concat()");
 let sonuc = kurs.concat(tarih);
 console.log(`kurs.concat(tarih) => ${sonuc}`);
 
+console.error("indexOf()");
 let index = kurs.indexOf('u');
 console.log(`kurs.indexOf('u') => ${index}`);
 
+console.error("lastIndexOf()");
 let index2 = kurs.lastIndexOf("Kursu");
 console.log(`kurs.lastIndexOf("Kursu") => ${index2}`);
 
+console.error("toUpperCase()");
 let buyuk = kurs.toUpperCase();
 console.log(`kurs.toUpperCase() => ${buyuk}`);
 
+console.error("toLowerCase()");
 let kucuk = kurs.toLowerCase();
 console.log(`kurs.toLowerCase() => ${kucuk}`);
 
+console.error("trim()");
 let bos = kurs.trim();
 console.log(`kurs.trim() => ${bos}`);
 
+console.error("slice()");
 let dilimleyici = kurs.slice(7, 12);
 console.log(`kurs.slice(7,12) => ${dilimleyici}`);
 
+console.error("substring()");
 let subs = kurs.substring(7, 12);
 console.log(`kurs.substring(7,12) => ${subs}`);
 
+console.error("replace()");
 let degis = kurs.replace("Modern", "Guncel");
 console.log(`kurs.replace("Modern","Guncel") => ${degis}`);
 
+console.error("split()");
 let dizi = kurs.split(" ");
-console.log(dizi);
+console.log("kurs.split(\" \") =>",dizi);
 
+console.error("valueOf()");
 console.log(`kurs.valueOf() => ${kurs.valueOf()}`);
 
+console.error("startsWith()");
 console.log(`kurs.startsWith("Mode") => ${kurs.startsWith("Mode")}`);
 
+console.error("endsWith()");
 console.log(`kurs.endsWith("Kursu") => ${kurs.endsWith("Kursu")}`);
-

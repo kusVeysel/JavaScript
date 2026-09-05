@@ -20,7 +20,6 @@ const person = {
 }
 
 let { firstName, lastName, country, age } = person;
-
 console.log(firstName, lastName, country, age);
 
 let { firstName: isim, lastName: soyisim, country: ulke, age: yas } = person;

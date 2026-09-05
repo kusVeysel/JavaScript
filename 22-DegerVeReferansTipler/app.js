@@ -36,5 +36,3 @@ const ogrenci = { isim: "Ali", adres: { il: "Ankara" } };
 const ogrenciKopyasi = { ...ogrenci };
 ogrenciKopyasi.adres.il = "İzmir";
 console.log("İç nesne paylaşılır:", ogrenci.adres.il);
-
-

@@ -7,7 +7,7 @@
 let a = Number("5");
 console.log(`${typeof a} : ${a}`);
 
-let b = parseInt("5px", 10); // Metnin başındaki tam sayıyı alır.
+let b = parseInt("5px"); // Metnin başındaki tam sayıyı alır.
 console.log(`${typeof b} : ${b}`);
 
 let c = parseFloat("5.5");

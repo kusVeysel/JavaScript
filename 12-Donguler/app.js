@@ -1,9 +1,9 @@
 //? Döngüler
 /*
-* for: koşul sağlanıncaya kadar devam eder
-* while: koşul sağlanıncaya kadar devam eder
-* do-while: koşul sağlamasa bile en az 1kere çalışır
-* forEach: dizinin her elemanı için verilen fonksiyonu bir kez çalıştırır
+* for: Koşul sağlanıncaya kadar devam eder
+* while: Koşul sağlanıncaya kadar devam eder
+* do-while: Koşul sağlamasa bile en az 1kere çalışır
+* forEach: Dizinin her elemanı için verilen fonksiyonu bir kez çalıştırır
 */
 
 //? For Döngüsü

@@ -1,5 +1,4 @@
 //? Math Metotlar
-
 /*
 * floor(): Sayıyı aşağı yuvarlar; negatiflerde daha küçük tam sayıya gider.
 * ceil(): Sayıyı yukarı yuvarlar.
@@ -38,6 +37,5 @@ console.log(`Math.floor(-2.4) => ${Math.floor(-2.4)}`);
 console.log(`Math.sign(-8) => ${Math.sign(-8)}`);
 console.log(`Math.cbrt(27) => ${Math.cbrt(27)}`);
 
-// min dahil, max hariç aralıkta rastgele tam sayı üretme formülü.
 const rastgeleTamSayi = Math.floor(Math.random() * 10 + 10);
 console.log(`10-19 arası sayı => ${rastgeleTamSayi}`);

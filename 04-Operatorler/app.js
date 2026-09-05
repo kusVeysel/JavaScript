@@ -68,7 +68,7 @@ console.error("----Karşılaştırma Operatörler----")
 /*
 * ==: eşit mi operatörü
 * ===: eşit mi operatörü ama daha katı tip de aynı olmalı
-! 4 ==="4" false döner ama '==' bunda true döner 
+! 4 === "4" false döner ama '==' bunda true döner 
 * >: büyük mü operatörü
 * <: küçük mü operatörü
 * >=: büyük veya eşit mi operatörü

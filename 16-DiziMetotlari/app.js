@@ -18,9 +18,18 @@
 * split(separator): string metodudur; metni belirli bir ifadeye göre diziye böler
 * indexOf(): elemanın index numarasını verir yoksa -1 döner
 * includes(): verilen elemanı içeriyor mu ona bakar, true false döner
-*/
 
+* map(): forEach gibi her elemanı döner.
+* filter(): Koşula uyan elemanları getirir.
+* find(): Koşula uyan ilk elemanı getirir.
+* some(): Koşula uyan en az 1 eleman var mı.
+* every(): Koşula tüm elemanlar uyuyor mu.
+* reduce(): Dizideki elemanları bir yere toplar, map gibi ama sonuçta tekil bir sonuç olur
+* → dizi.reduce((biriktirici, item) => {...}, başlangıç_değeri);
+* sort(): Varsayılan olarak metin sıralaması yapar, sayılar için karşılaştırıcı verilir.
+*/
 let arabalar = ["bmw", "toyota", "reamult", "mercedes", "porshe"];
+
 console.log("arabalar => " + arabalar);
 
 console.error("PUSH");
@@ -84,12 +93,23 @@ console.log("includes('porche') => " + sonuc);
 
 //? Fonksiyonel dizi metotları yeni bir sonuç üretir; kaynak diziyi değiştirmez.
 const fiyatlar = [10, 25, 40, 60];
+console.error("MAP");
 console.log("map() =>", fiyatlar.map((fiyat) => fiyat * 2));
+
+console.error("FILTER");
 console.log("filter() =>", fiyatlar.filter((fiyat) => fiyat >= 25));
+
+console.error("FIND");
 console.log("find() =>", fiyatlar.find((fiyat) => fiyat > 30));
+
+console.error("SOME");
 console.log("some() =>", fiyatlar.some((fiyat) => fiyat > 50));
+
+console.error("EVERY");
 console.log("every() =>", fiyatlar.every((fiyat) => fiyat > 0));
+
+console.error("REDUCE");
 console.log("reduce() =>", fiyatlar.reduce((toplam, fiyat) => toplam + fiyat, 0));
 
-// sort() varsayılan olarak metin sıralaması yapar; sayılar için karşılaştırıcı verilir.
+console.error("SORT");
 console.log("sort() =>", [...fiyatlar].sort((birinci, ikinci) => birinci - ikinci));
