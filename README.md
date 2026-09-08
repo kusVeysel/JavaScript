@@ -10,9 +10,10 @@ Konuların daha iyi pekiştirilmesi amacıyla, anlatımlar içerisinde çeşitli
 
 `proje` klasöründe, JavaScript klasöründe anlatılan konuların bir arada kullanıldığı kapsamlı bir proje bulunmaktadır.
 
-Bu proje ile konuların yalnızca ayrı ayrı öğrenilmesi değil, **gerçek bir uygulama içerisinde nasıl birlikte kullanılabileceğinin görülmesi** amaçlanmıştır.
+Bu proje ile konuların yalnızca ayrı ayrı öğrenilmesi değil, gerçek bir uygulama içerisinde nasıl birlikte kullanılabileceğinin görülmesi amaçlanmıştır. **Veriler JSON üzerinden çekildiği için projeyi F5 ile değil, Alt + L + O (Open with Live Server) ile başlatın. Aksi takdirde veriler gelmeyecektir.**
 
 Projede temel JavaScript yapılarından modern JavaScript özelliklerine, asenkron işlemlerden API kullanımına ve nesne yönelimli programlamaya kadar farklı konuların bir arada kullanılması hedeflenmiştir.
+
 
 ### 🎯 Amaç
 
